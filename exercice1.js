@@ -3,7 +3,8 @@ let tableau = [];
 let resultat = document.getElementById('resultat');
 let button2 = document.getElementById('button1');
 let button3 = document.getElementById('affiche');
-let button4 = document.getElementById('deleteall');
+let button4 = document.getElementById('deletel');
+let button5 = document.getElementById('deleteall');
 let para = document.getElementById('p');
 let input = document.getElementById('input');
 
@@ -28,8 +29,20 @@ button2.addEventListener('click', function (){
 })
 
 button3.addEventListener('click', function (){
-  for(let i = 0; i < tableau.length; i++){
-      para.innerHTML += tableau[i];
-  }
+    para.innerHTML = tableau;
+})
+
+button4.addEventListener('click', function (){
+    if(tableau.length > 0) {
+        para.innerHTML = tableau.pop();
+        console.log(tableau);
+    }
+})
+
+button5.addEventListener('click', function (){
+    if (tableau.length > 11){
+      document.getElementById('p').innerHTML = tableau[0];
+    }
+
 })
 
