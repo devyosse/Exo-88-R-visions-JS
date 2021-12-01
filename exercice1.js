@@ -33,14 +33,12 @@ button3.addEventListener('click', function (){
 })
 
 button4.addEventListener('click', function (){
-    if(tableau.length > 0) {
-        para.innerHTML = tableau.pop();
+    para.innerHTML = tableau.pop();
         console.log(tableau);
-    }
 })
 
 button5.addEventListener('click', function (){
-    if (tableau.length > 11){
+    if (tableau.length > 0){
       document.getElementById('p').innerHTML = tableau[0];
     }
 
